@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./iconfont.css" />
+  <title>三子棋</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      background: #0f0e18;
+    }
+
+    .container {
+      margin: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #ea4dc5;
+    }
+
+    #board {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      background: #2d2f42;
+      border: 1px solid navajowhite;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 500ms ease;
+    }
+
+    .cell:hover {
+      background: #454966;
+    }
+
+    .cell .iconfont {
+      /* 背景颜色透明 */
+      background: transparent;
+      width: 100%;
+      height: 100%;
+      font-size: 50px;
+      line-height: 100px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .blue {
+      color: #7ceefc;
+    }
+
+    .purple {
+      color: #ea4dc5;
+    }
+
+    #tips p {
+      color: #dddddd;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="container">
+    <!-- 标题 -->
+    <h1>Tic-tac-toe Simulator</h1>
+    <!-- 棋盘 -->
+    <div id="board"></div>
+    <!-- 提示功能 -->
+    <div id="tips"></div>
+  </div>
+
+  <script src="./TicTaxToe.js"></script>
+</body>
+
+</html>
