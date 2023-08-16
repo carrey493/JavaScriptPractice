@@ -1,0 +1,21 @@
+{
+  "name": "calendarcomponent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.63.3",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "jest": "^29.6.2",
+    "nginx": "^1.0.8"
+  }
+}
