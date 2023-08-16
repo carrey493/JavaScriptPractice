@@ -95,7 +95,7 @@ function check(pattern, chess) {
     for (let i = 0; i < 3; i++) {
         let win = true;
         for (let j = 0; j < 3; j++) {
-            if (parent[i * 3 + j] !== chess)
+            if (pattern[i * 3 + j] !== chess)
                 win = false;
         }
         if (win) return true;
