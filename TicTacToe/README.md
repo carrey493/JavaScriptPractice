@@ -11,3 +11,5 @@
 >源码地址：https://github.com/TriDiamond/frontend-tutorials/blob/master/exercises/tic-tac-toe/tic-tac-toe-ai.html
 
 这个项目使用原生javaScript实现一个井字棋游戏。
+
+<p align=center><img src="https://img2023.cnblogs.com/blog/2332774/202308/2332774-20230816194859740-1773027136.gif" alt=""  /></p>
