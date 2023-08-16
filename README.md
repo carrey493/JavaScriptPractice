@@ -45,10 +45,24 @@ JavaScript实战练习是指通过实际的项目或问题来解决，来加深�
 
 **JavaScript手写实现部分函数**
 
-1. (变量数据类型的判断)[https://github.com/AtroxEzerel/JavaScriptPractice/blob/main/JavaScript%20Handwriting/01_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD.js]
+1. [变量数据类型的判断](https://github.com/AtroxEzerel/JavaScriptPractice/blob/main/JavaScript%20Handwriting/01_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD.js)
 
 ### TicTacToe
 
-**JavaScript实现三子棋小游戏**
+原生JavaScript实现三子棋小游戏。
 
-> 学习地址：CSDN
+>学习地址：https://blog.csdn.net/TriDiamond6/article/details/109377854
+
+**效果预览**
+
+<p align=center><img src="https://img2023.cnblogs.com/blog/2332774/202308/2332774-20230816194859740-1773027136.gif" alt=""  /></p>
+
+### CalendarComponent
+
+原生JavaScript实现日历组件。
+
+>学习地址：https://www.bilibili.com/video/BV16c411u7Vy
+
+**效果预览**
+
+<p align=center><img src="https://img2023.cnblogs.com/blog/2332774/202308/2332774-20230816194325707-522181960.gif" alt=""  /></p>
