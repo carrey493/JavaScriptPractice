@@ -66,3 +66,13 @@ JavaScript实战练习是指通过实际的项目或问题来解决，来加深�
 **效果预览**
 
 <p align=center><img src="https://img2023.cnblogs.com/blog/2332774/202308/2332774-20230816194325707-522181960.gif" alt=""  /></p>
+
+### PerpetualCalendar
+
+**原生JavaScript+jQuery实现万年历**
+
+>学习地址：https://www.bilibili.com/video/BV1DT4y1Z77L
+
+**效果预览**
+
+<p align=center><img src="https://img2023.cnblogs.com/blog/2332774/202312/2332774-20231226232841249-261016078.gif" alt=""  /></p>

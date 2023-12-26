@@ -1,0 +1,421 @@
+body,
+p,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  color: #333;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+
+i {
+  font-style: normal;
+}
+
+#calendar {
+  width: 600px;
+  height: 480px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  border-radius: 16px;
+  display: flex;
+}
+
+#calendar .left {
+  width: 480px;
+  padding: 15px 15px 0 15px;
+  border: 2px solid #4e6ef2;
+  border-right: none;
+  border-radius: 16px 0 0 16px;
+}
+
+#calendar .right {
+  width: 112px;
+  background: #4e6ef2;
+  border-radius: 0px 16px 16px 0px;
+  color: #fff;
+  text-align: center;
+}
+#calendar.active .left {
+  border-color: #eb3636;
+}
+
+#calendar.active .right {
+  background: #eb3636;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select {
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #d7d9e0;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  position: relative;
+}
+
+.yearSelect {
+  width: 96px;
+}
+
+.selected {
+  height: 28px;
+  padding: 0 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selected i {
+  font-size: 14px;
+  color: #9ba3a9;
+  font-family: "YaHei";
+  transform: scaleX(1.5) rotate(90deg);
+}
+
+.select.active {
+  border-color: #a7aab5;
+}
+
+.select.active .selected i {
+  color: #767e87;
+  transform: scaleX(1.5) rotate(-90deg);
+}
+
+.selectedBox {
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: #fff;
+  padding: 9px 0 9px 16px;
+  position: absolute;
+  top: 38px;
+  left: 0px;
+  z-index: 9;
+  display: none;
+}
+
+.select.active .selectedBox {
+  display: block;
+}
+
+.yearSelect .selectedBox {
+  max-height: 312px;
+  overflow: hidden;
+}
+
+.selectedBox li {
+  height: 27px;
+  line-height: 27px;
+  cursor: pointer;
+}
+
+.selectedBox li:hover,
+.selectedBox li.active {
+  color: #315efb;
+}
+
+.scroll {
+  width: 4px;
+  position: absolute;
+  right: 4px;
+  top: 9px;
+  bottom: 9px;
+  /* background: #ccc; */
+}
+
+.scroll span {
+  width: 100%;
+  height: 30px;
+  background: #4e6ef2;
+  /* display: block; */
+  position: absolute;
+  top: 0;
+  border-radius: 6px;
+}
+
+.monthSelect {
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow span {
+  font-size: 18px;
+  color: #9c9fac;
+  transform: scaleY(1.5);
+  font-family: "YaHei";
+  position: relative;
+  top: -2px;
+}
+
+.monthSelect .select {
+  width: 80px;
+}
+
+.holidaySelect {
+  width: 96px;
+}
+
+.topBar button {
+  width: 68px;
+  height: 30px;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+/* 日期 */
+.dateWrap {
+  width: 100%;
+  margin-top: 14px;
+  border-spacing: 4px;
+}
+
+.dateWrap th {
+  width: 60px;
+  height: 36px;
+  font-weight: normal;
+}
+
+.dateWrap td {
+  width: 60px;
+  height: 56px;
+}
+
+.dateWrap div {
+  height: 100%;
+  border-radius: 6px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.dateWrap div:hover,
+.dateWrap div.active {
+  border-color: #bdbfc8;
+}
+
+.dateWrap div span:nth-child(1) {
+  font-size: 18px;
+  color: #000;
+}
+
+.dateWrap div span:nth-child(2) {
+  font-size: 12px;
+}
+
+.dateWrap td:nth-child(n + 6) span:nth-child(1) {
+  /* td>=6 */
+  color: #f73131;
+}
+
+.dateWrap .holiday {
+  background: #fde3e4;
+}
+
+.dateWrap .holiday:hover,
+.dateWrap .holiday.active {
+  border-color: #f38558;
+}
+
+.dateWrap .holiday::before {
+  content: "休";
+  font-size: 12px;
+  line-height: 12px;
+  color: #f73131;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
+.dateWrap .holiday span:nth-child(1) {
+  color: #f73131;
+}
+
+.dateWrap .weekday {
+  background: #f5f5f6;
+}
+
+.dateWrap .weekday::before {
+  content: "班";
+  font-size: 12px;
+  line-height: 12px;
+  color: #626675;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
+.dateWrap .weekday td:nth-child(n + 6) span:nth-child(1) {
+  color: #000;
+}
+
+.prevMonth,
+.nextMonth {
+  opacity: 0.4;
+}
+
+.dateWrap div.today {
+  border-color: #4e6ef2;
+}
+
+.dateWrap div .today.holiday {
+  border-color: #f73131;
+}
+
+#calendar .date {
+  line-height: 45px;
+}
+
+#calendar .day {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 6px;
+  line-height: 80px;
+  font-size: 52px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+#calendar .lunar p {
+  line-height: 21px;
+}
+
+#calendar .holidayLyst li {
+  width: 112px;
+  box-sizing: border-box;
+  margin-top: 13px;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#calendar .holidayLyst li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  border-radius: 5px;
+}
+
+#calendar .suit {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 12px 0 -100px 0;
+  padding: 12px 0 100px 0;
+}
+#calendar .suit .default {
+  display: flex;
+  justify-content: space-around;
+}
+
+#calendar .suit .default dl {
+  max-height: 190px;
+  overflow: hidden;
+}
+
+#calendar .suit .default dt {
+  font-size: 24px;
+}
+
+#calendar .suit .default dd {
+  line-height: 20px;
+}
+
+#calendar .suit .hover {
+  width: 190px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: -230px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  padding: 16px;
+  display: none;
+}
+
+#calendar .suit:hover .hover {
+  display: block;
+}
+
+#calendar .suit .hover dl {
+  display: flex;
+  justify-content: space-between;
+}
+
+#calendar .suit .hover dt {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background: #4e6ef2;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+#calendar .suit .hover dd {
+  width: 156px;
+  text-align: left;
+  line-height: 21px;
+}
+
+#calendar .suit .hover dl:nth-child(2) {
+  margin-top: 15px;
+}
+
+#calendar .suit .hover dl:nth-child(2) dt {
+  background: #f73131;
+}
